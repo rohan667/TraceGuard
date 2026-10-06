@@ -1,0 +1,12 @@
+[
+  {"id":"evt-001","timestamp":"2026-10-06T09:00:00Z","host":"workstation-07","source":"Windows Security","event_type":"login_success","username":"j.smith","src_ip":"10.0.0.24"},
+  {"id":"evt-002","timestamp":"2026-10-06T09:14:00Z","host":"workstation-07","source":"Sysmon","event_type":"process_created","username":"j.smith","src_ip":"10.0.0.24","command_line":"C:\\Windows\\System32\\notepad.exe"},
+  {"id":"evt-003","timestamp":"2026-10-06T09:31:00Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_failed","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-004","timestamp":"2026-10-06T09:31:08Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_failed","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-005","timestamp":"2026-10-06T09:31:16Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_failed","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-006","timestamp":"2026-10-06T09:31:24Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_failed","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-007","timestamp":"2026-10-06T09:31:32Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_failed","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-008","timestamp":"2026-10-06T09:31:41Z","host":"finance-laptop-02","source":"Windows Security","event_type":"login_success","username":"a.lee","src_ip":"203.0.113.44"},
+  {"id":"evt-009","timestamp":"2026-10-06T10:02:00Z","host":"engineering-04","source":"Sysmon","event_type":"process_created","username":"m.chen","src_ip":"10.0.0.52","command_line":"powershell.exe -NoProfile -EncodedCommand SQBFAFgA"},
+  {"id":"evt-010","timestamp":"2026-10-06T10:17:00Z","host":"identity-server-01","source":"Windows Security","event_type":"user_added_to_admins","username":"svc-backup","src_ip":"10.0.0.18","target":"Domain Admins"}
+]

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>TraceGuard | Detection Workbench</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">T</span><span>TRACEGUARD<small>DETECTION WORKBENCH</small></span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav-item active" href="#overview"><span>▦</span> Overview</a>
+      <a class="nav-item" href="#alerts"><span>◉</span> Alerts <b id="nav-alert-count">0</b></a>
+      <a class="nav-item" href="#events"><span>≋</span> Event stream</a>
+      <div class="sidebar-bottom"><span class="status-dot"></span> LOCAL LAB <small>SIMULATED DATA</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><div class="eyebrow">SECURITY OPERATIONS / LOCAL LAB</div><h1>Detection workbench</h1></div><div class="top-actions"><span class="live"><i></i> ENGINE READY</span><button class="button button-quiet" id="reset-button">Reset demo</button></div></header>
+      <section class="intro"><div><div class="eyebrow accent">THREAT VISIBILITY</div><h2>Turn events into<br><em>useful signals.</em></h2><p>Explore explainable detections on safe, simulated security telemetry.</p></div><div class="intro-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="crosshair">＋</div><div class="art-caption">LOCAL ANALYSIS<br><strong>NO DATA LEAVES THIS MACHINE</strong></div></div></section>
+      <section class="metrics" id="overview">
+        <article class="metric"><span class="metric-label">EVENTS ANALYZED</span><strong id="event-count">0</strong><small>in current dataset</small></article>
+        <article class="metric"><span class="metric-label">ACTIVE ALERTS</span><strong id="alert-count">0</strong><small>rule matches</small></article>
+        <article class="metric"><span class="metric-label">HIGH / CRITICAL</span><strong id="urgent-count">0</strong><small>priority review</small></article>
+        <article class="metric"><span class="metric-label">RULE COVERAGE</span><strong>03</strong><small>MITRE ATT&amp;CK techniques</small></article>
+      </section>
+      <section class="panel scenario-panel"><div class="section-heading"><div><div class="eyebrow">SAFE DEMONSTRATIONS</div><h3>Run a scenario</h3></div><span class="small-note">Synthetic events only</span></div><div class="scenario-grid" id="scenario-list"></div></section>
+      <section class="content-grid">
+        <section class="panel" id="alerts"><div class="section-heading"><div><div class="eyebrow">DETECTION OUTPUT</div><h3>Alerts <span class="count-pill" id="alerts-pill">0</span></h3></div><button class="button button-quiet" id="export-button">Export report ↓</button></div><div id="alert-list" class="alert-list"></div></section>
+        <section class="panel upload-panel"><div class="eyebrow">BRING YOUR OWN SAMPLE</div><h3>Analyze a JSON file</h3><p>Use the documented event format. Files stay in this browser session and are sent only to your local app.</p><label class="dropzone" for="file-input"><span class="upload-icon">↑</span><strong>Choose a JSON file</strong><small>Maximum 1 MB · up to 5,000 events</small></label><input id="file-input" type="file" accept=".json,application/json" hidden><div class="format-link"><a href="data/sample_events.json" download>Download sample events</a><span>·</span><a href="README.md" target="_blank">Event format guide</a></div><div class="message" id="message" role="status"></div></section>
+      </section>
+      <section class="panel events-panel" id="events"><div class="section-heading"><div><div class="eyebrow">RAW TELEMETRY</div><h3>Event stream</h3></div><input id="search-input" class="search" type="search" placeholder="Filter events…" aria-label="Filter events"></div><div class="table-wrap"><table><thead><tr><th>TIME</th><th>EVENT</th><th>USER</th><th>SOURCE IP</th><th>HOST</th><th>DETAIL</th></tr></thead><tbody id="event-rows"></tbody></table></div></section>
+      <footer>TRACEGUARD <span>·</span> LOCAL DEMO FOR DEFENSIVE SECURITY LEARNING <span>·</span> ALL EVENTS ARE SYNTHETIC</footer>
+    </main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

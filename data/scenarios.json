@@ -1,0 +1,31 @@
+[
+  {
+    "id":"password-spray",
+    "name":"Repeated login attempts",
+    "summary":"Shows repeated failed logins followed by a successful login from the same simulated address.",
+    "events":[
+      {"id":"spray-01","timestamp":"2026-10-06T11:00:00Z","host":"demo-laptop","source":"Windows Security","event_type":"login_failed","username":"r.patel","src_ip":"198.51.100.27"},
+      {"id":"spray-02","timestamp":"2026-10-06T11:00:07Z","host":"demo-laptop","source":"Windows Security","event_type":"login_failed","username":"r.patel","src_ip":"198.51.100.27"},
+      {"id":"spray-03","timestamp":"2026-10-06T11:00:14Z","host":"demo-laptop","source":"Windows Security","event_type":"login_failed","username":"r.patel","src_ip":"198.51.100.27"},
+      {"id":"spray-04","timestamp":"2026-10-06T11:00:21Z","host":"demo-laptop","source":"Windows Security","event_type":"login_failed","username":"r.patel","src_ip":"198.51.100.27"},
+      {"id":"spray-05","timestamp":"2026-10-06T11:00:28Z","host":"demo-laptop","source":"Windows Security","event_type":"login_failed","username":"r.patel","src_ip":"198.51.100.27"},
+      {"id":"spray-06","timestamp":"2026-10-06T11:00:40Z","host":"demo-laptop","source":"Windows Security","event_type":"login_success","username":"r.patel","src_ip":"198.51.100.27"}
+    ]
+  },
+  {
+    "id":"encoded-powershell",
+    "name":"Encoded PowerShell",
+    "summary":"Flags a simulated encoded PowerShell command for analyst review.",
+    "events":[
+      {"id":"ps-01","timestamp":"2026-10-06T11:20:00Z","host":"demo-workstation","source":"Sysmon","event_type":"process_created","username":"k.jones","src_ip":"10.0.0.31","command_line":"powershell.exe -NoProfile -EncodedCommand SQBFAFgA"}
+    ]
+  },
+  {
+    "id":"admin-change",
+    "name":"Unexpected admin change",
+    "summary":"Flags a simulated privileged group membership change.",
+    "events":[
+      {"id":"iam-01","timestamp":"2026-10-06T11:40:00Z","host":"demo-identity-server","source":"Windows Security","event_type":"user_added_to_admins","username":"temp-operator","src_ip":"10.0.0.19","target":"Domain Admins"}
+    ]
+  }
+]
